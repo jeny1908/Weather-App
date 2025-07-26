@@ -1,0 +1,184 @@
+body {
+  background-color: #a4d4f7;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Left panel */
+.weather-input {
+  flex: 0 0 30%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input field styling */
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+select.converter {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-weight: bold;
+}
+
+.input-group img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Right panel */
+.weather-output {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* Highlight grid layout */
+.highlight {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+  gap: 20px;
+}
+
+.highlight > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #bde3f9;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.highlight > div:hover {
+  transform: scale(1.05);
+}
+
+.highlight img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.highlight h1 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .weather-input,
+  .weather-output {
+    width: 100%;
+  }
+}
+
+/* ============ Weather Details ============ */
+.weathericon img {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.temperature {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1e3c72;
+  margin-top: 10px;
+}
+
+.feelslike {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.description {
+  text-align: center;
+  font-style: italic;
+  font-size: 1rem;
+  color: #666;
+}
+
+.city {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 8px;
+  color: #111;
+}
+
+.date {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+/* ============ Highlight Cards ============ */
+.highlight > div {
+  background-color: #bde3f9;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.highlight > div:hover {
+  transform: scale(1.05);
+}
+
+.highlight h1 {
+  font-size: 1.5rem;
+  color: #1e3c72;
+  margin-top: 5px;
+}
+
+.highlight img {
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+}
